@@ -1,0 +1,59 @@
+package com.example.quickbuyapp.model.firebasesource
+
+import com.google.firebase.auth.FirebaseAuth
+import io.reactivex.Completable
+
+class FirebaseSource {
+
+    private val firebaseAuth: FirebaseAuth by lazy {
+        FirebaseAuth.getInstance()
+    }
+
+
+    fun login(email: String, password: String) = Completable.create { emitter ->
+        firebaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener {
+            if (!emitter.isDisposed) {
+                if (it.isSuccessful)
+                    emitter.onComplete()
+                else
+                    emitter.onError(it.exception!!)
+            }
+        }
+    }
+
+    fun register(email: String, password: String) = Completable.create { emitter ->
+        firebaseAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener {
+            if (!emitter.isDisposed) {
+                if (it.isSuccessful)
+                    emitter.onComplete()
+                else
+                    emitter.onError(it.exception!!)
+            }
+        }
+    }
+    fun forget(email: String) = Completable.create { emitter ->
+        firebaseAuth.sendPasswordResetEmail(email).addOnCompleteListener {
+            if (!emitter.isDisposed) {
+                if (it.isSuccessful)
+                    emitter.onComplete()
+                else
+                    emitter.onError(it.exception!!)
+            }
+        }
+    }
+    fun change(password: String)= Completable.create { emitter ->
+        currentUser()!!.updatePassword(password)
+            .addOnCompleteListener {
+                if (!emitter.isDisposed) {
+                    if (it.isSuccessful)
+                        emitter.onComplete()
+                    else
+                        emitter.onError(it.exception!!)
+                }
+            }
+    }
+    fun logout() = firebaseAuth.signOut()
+
+    fun currentUser() = firebaseAuth.currentUser
+
+}

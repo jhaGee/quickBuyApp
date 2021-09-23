@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.example.quickbuyapp.ui.auth.AuthViewModel" />
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.auth.SignUpPage">
+
+        <TextView
+            android:id="@+id/textViewSignupMessage"
+            android:layout_width="367dp"
+            android:layout_height="83dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="28dp"
+            android:text="@string/signUp_with_us"
+            android:textColor="@color/blackColor"
+            android:textSize="36sp"
+            android:textStyle="bold|italic" />
+
+
+        <TextView
+            android:id="@+id/textViewEmailSignup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewSignupMessage"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="80dp"
+            android:text="@string/email"
+            android:textColor="@color/editText"
+            android:textSize="24sp"
+            />
+
+        <EditText
+            android:id="@+id/editTextEmailAddressSignup"
+            android:text="@={viewmodel.email}"
+            android:layout_width="300dp"
+            android:layout_height="52dp"
+            android:layout_below="@id/textViewEmailSignup"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edit_text_stroke"
+            android:ems="10"
+            android:hint="@string/email1"
+            android:paddingLeft="15dp"
+            android:textColorHint="#534E4E" />
+
+        <TextView
+            android:id="@+id/textViewPasswordSignup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editTextEmailAddressSignup"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/password1"
+            android:textColor="@color/editText"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/editTextPasswordSignup"
+            android:text="@={viewmodel.password}"
+            android:layout_width="300dp"
+            android:layout_height="52dp"
+            android:layout_below="@id/textViewPasswordSignup"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edit_text_stroke"
+            android:ems="10"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:paddingLeft="15dp"
+            android:textColorHint="#595454"
+            android:textSize="18sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="78dp"
+            android:layout_below="@+id/editTextPasswordSignup"
+            android:layout_marginTop="8dp">
+
+            <Button
+                android:id="@+id/buttonSignup"
+                android:onClick="@{() -> viewmodel.signup()}"
+                android:layout_width="136dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="114dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/round_button"
+                android:text="@string/signUp"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+</layout>

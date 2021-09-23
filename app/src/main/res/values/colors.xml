@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#09D5EF</color>
+    <color name="buttonColor">#0529F3</color>
+    <color name="editText">#072BF4</color>
+    <color name="blackColor">#FF0C0C0C</color>
+    <color name="overlay_color">#55333635</color>
+    <color name="border_color">#AA333635</color>
+    <color name="dialog_header_color">#C5C5C5</color>
+    <color name="dialog_text_color">#464646</color>
+</resources>

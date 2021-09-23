@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "599492333494",
+    "firebase_url": "https://quickbuyapp.firebaseio.com",
+    "project_id": "quickbuyapp",
+    "storage_bucket": "quickbuyapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:599492333494:android:d11edd9e16cc220a09bb17",
+        "android_client_info": {
+          "package_name": "com.example.quickbuyapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "599492333494-se4rpfddba0h9384u3sod8olqe07r9jg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQO6dMTgN3hRYej3SPSWI3TyHHnhpgbzA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "599492333494-se4rpfddba0h9384u3sod8olqe07r9jg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

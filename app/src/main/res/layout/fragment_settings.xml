@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.example.quickbuyapp.ui.dashboard.DashboardViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.settings.SettingsFragment">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="346dp"
+            android:layout_height="62dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="115dp"
+            android:layout_marginEnd="56dp"
+            android:layout_marginBottom="89dp"
+            android:text="Change Password"
+            android:textColor="@color/blackColor"
+            android:textSize="30sp" />
+
+        <ProgressBar
+            android:id="@+id/progressBarChange"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="166dp"
+            android:layout_marginTop="401dp"
+            android:layout_marginEnd="197dp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/linearlayoutone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="180dp"
+            android:orientation="vertical"
+            android:paddingLeft="15dp">
+
+            <TextView
+                android:id="@+id/textViewNewPass"
+                android:layout_width="224dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/new_password"
+                android:textColor="#050505"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/editTextNewPassword"
+                android:layout_width="333dp"
+                android:layout_height="59dp"
+                android:layout_weight="1"
+                android:background="@drawable/edit_text_stroke"
+                android:ems="10"
+                android:inputType="textPassword"
+                android:paddingLeft="8dp"
+                android:text="@={viewmodel.password}" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearlayouttwo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linearlayoutone"
+            android:orientation="vertical"
+            android:paddingLeft="15dp">
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/confirm_new_password"
+                android:textColor="@color/blackColor"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/editTextnewPasswordConf"
+                android:layout_width="333dp"
+                android:layout_height="59dp"
+                android:background="@drawable/edit_text_stroke"
+                android:ems="10"
+                android:inputType="textPassword"
+                android:paddingLeft="8dp"
+                android:text="@={viewmodel.password1}" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/buttonChangePass"
+            android:layout_width="151dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linearlayouttwo"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="false"
+            android:layout_marginTop="39dp"
+            android:background="@drawable/round_button"
+            android:onClick="@{(v) -> viewmodel.change(v)}"
+            android:text="@string/change"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_baseline_home_24"
+            android:title="@string/menu_home" />
+
+        <item
+            android:id="@+id/nav_category"
+            android:icon="@drawable/ic_baseline_list_24"
+            android:title="@string/menu_category" />
+        <item
+            android:id="@+id/nav_scanner"
+            android:title="@string/scanner"
+            android:icon="@drawable/ic_baseline_camera"/>
+        <item
+            android:id="@+id/nav_cart"
+            android:icon="@drawable/ic_baseline_shopping_cart_24"
+            android:title="@string/cart"/>
+        <item
+            android:id="@+id/nav_view_order"
+            android:icon="@drawable/ic_baseline_view_headline_24"
+            android:title="@string/menu_view_order" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/ic_baseline_settings_24"
+            android:title="@string/menu_settings" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/logout"
+            android:title="@string/menu_logout" />
+        <item android:title="More">
+            <menu>
+                <item
+                    android:id="@+id/nav_about_us"
+                    android:icon="@drawable/ic_baseline_info_24"
+                    android:title="@string/menu_about_us" />
+            </menu>
+
+        </item>
+    </group>
+</menu>

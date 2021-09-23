@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.quickbuyapp.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/nav_category"
+        android:name="com.example.quickbuyapp.ui.category.MenuFragment"
+        android:label="@string/menu_category"
+        tools:layout="@layout/fragment_category" />
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.example.quickbuyapp.ui.settings.SettingsFragment"
+        android:label="@string/menu_settings"
+        tools:layout="@layout/fragment_settings" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.example.quickbuyapp.ui.logout.LogoutFragment"
+        android:label="@string/menu_logout"
+        tools:layout="@layout/fragment_logout" />
+
+    <fragment
+        android:id="@+id/nav_product_list"
+        android:name="com.example.quickbuyapp.ui.productlist.ProductListFragment"
+        android:label="@string/food_list"
+        tools:layout="@layout/product_list_fragment" />
+
+    <fragment
+        android:id="@+id/nav_view_order"
+        android:name="com.example.quickbuyapp.ui.viewOrders.ViewOrderFragment"
+        android:label="@string/menu_view_order"
+        tools:layout="@layout/view_order_fragment" />
+
+    <fragment
+        android:id="@+id/nav_cart"
+        android:name="com.example.quickbuyapp.ui.cart.CartFragment"
+        android:label="@string/cart"
+        tools:layout="@layout/fragment_cart"
+        />
+    <fragment
+        android:id="@+id/nav_scanner"
+        android:name="com.example.quickbuyapp.ui.barcode.FragmentBarcode"
+        android:label="@string/scanner"
+        tools:layout="@layout/barcode_fragment"/>
+    <fragment
+        android:id="@+id/nav_product_detail"
+        android:name="com.example.quickbuyapp.ui.productDetail.ProductDetailFragment"
+        android:label="@string/product_detail"
+        tools:layout="@layout/product_detail_fragment" />
+
+    <fragment
+        android:id="@+id/nav_about_us"
+        android:name="com.example.quickbuyapp.ui.aboutus.FragmentAboutUs"
+        android:label="@string/menu_about_us"
+        tools:layout="@layout/fragment_about_us"/>
+
+
+</navigation>
