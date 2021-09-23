@@ -1,1 +1,1 @@
-# quick-buy
+eCommerce Application developed for TCS internship
